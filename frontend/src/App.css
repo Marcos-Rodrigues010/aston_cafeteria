@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --color-font-default: #CCC;
+  --color-font-secondary: #FFF;
+  --color-font-default-dark: #3F3B3B;
+  --color-default-money: #208B3D;
+  --bg-default: #3F3636;
+  --bg-default-light: #C4C4C4;
+  --bg-secondary: #7C7B7B;
+  --bg-darkness: #1C1A1A;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: auto;
+  max-width: 1440px;
+  position: relative;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
