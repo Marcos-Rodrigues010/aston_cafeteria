@@ -311,8 +311,8 @@ const App = () => {
                             <label>Escolha a forma de pagamento:</label>
                             <select className='payment__typeSelect' onChange={(e) => setPaymentOption(e.target.value)}>
                                 <option value={null}></option>
-                                {paymentOptions.map(option => (
-                                    <option value={option.id}>{option.name}</option>
+                                {paymentOptions.map((option, key) => (
+                                    <option key={key} value={option.id}>{option.name}</option>
                                 ))}
                             </select>
                         </div>
@@ -337,8 +337,8 @@ const App = () => {
                                 <label>Escolha a forma de parcelamento:</label>
                                 <select className='payment__installmentSelect' onChange={e => setInstallment(e.target.value)}>
                                     <option value={null}></option>
-                                    {installmentList.length > 0 && installmentList.map(option => (
-                                        <option value={option.installment}>{option.label}</option>
+                                    {installmentList.length > 0 && installmentList.map((option, key) => (
+                                        <option key={key} value={option.installment}>{option.label}</option>
                                     ))}
                                 </select>
                             </div>

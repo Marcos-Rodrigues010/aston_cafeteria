@@ -40,9 +40,7 @@ const apiFetchDelete = async (endpoint, data = {}) => {
     };
 
     try{
-        const response = await fetch(`${BASE_URL}/${endpoint}`, payload);
-        const json = await response.json();
-        return json;
+        await fetch(`${BASE_URL}/${endpoint}`, payload);
     } catch(error){
         console.error(error);
     }
