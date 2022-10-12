@@ -6,6 +6,7 @@ export const Favorites = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    animation: fade 0.8s;
 
     .favorites {
         width: 100%;
@@ -27,11 +28,14 @@ export const Favorites = styled.div`
     .item__image, .image {
         width: 70px;
         height: 70px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .image {
-        width: 95%;
+        width: 100%;
+        display: block;
         margin: 0 auto;
         border-radius: 50%;
     }

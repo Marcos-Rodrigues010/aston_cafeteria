@@ -54,6 +54,7 @@ export const ProductCard = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        cursor: pointer;
     }
 
     .product-card__infos {
@@ -62,6 +63,7 @@ export const ProductCard = styled.div`
         align-items: center;
         height: 130px;
         padding: 10px;
+        cursor: pointer;
 
         .product-card__infos-title, .product-card__infos-value {
             text-align: center;
@@ -88,6 +90,7 @@ export const ProductCard = styled.div`
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 12px;
+        cursor: pointer;
 
         .product-card__purchase-information-icons {
 

@@ -73,6 +73,15 @@ const App = () => {
                 }
 
             });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto adicionado aos seus favoritos.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         }
     };
 
@@ -88,7 +97,15 @@ const App = () => {
                     favorites
                 }
             });
-            setShowConfirmation(false);
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto removido dos seus favoritos.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         };
     };
 
@@ -144,7 +161,7 @@ const App = () => {
                             {cart.length > 0 && cart.map((item, key) => (
                                 <li key={key} className='item'>
                                     <div className='item__image'>
-                                        <img src={getImage(item.nameImage)} className='image' />
+                                        <img src={getImage(item.nameImage)} className='image' alt='image'/>
                                     </div>
                                     <div className='item__description'>{item.description}</div>
                                     <div className='item__actions'>

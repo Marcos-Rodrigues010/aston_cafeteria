@@ -55,6 +55,7 @@ const App = () => {
 
     useEffect(() => {
         params.idProduct && prepareList();
+        window.scroll(0, 300);
         getClient();
     }, []);
 
@@ -293,7 +294,6 @@ const App = () => {
                         <div className='payment__deliveryInfos'>
                             <label className='payment__deliveryLabel'>Número:</label>
                             <input className='payment__deliveryInput' 
-                                type='number' 
                                 value={houseNumber} onChange={(e) => setHouseNumber(e.target.value)}>
                             </input>
                         </div>

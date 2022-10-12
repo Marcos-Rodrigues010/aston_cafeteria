@@ -6,6 +6,7 @@ export const Cart = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    animation: fade 0.8s;
 
     .cart {
         width: 100%;
@@ -27,12 +28,14 @@ export const Cart = styled.div`
     .item__image, .image {
         width: 70px;
         height: 70px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .image {
-        width: 95%;
-        margin: 0 auto;
+        width: 100%;
+        display: block;
         border-radius: 50%;
     }
 
