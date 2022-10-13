@@ -71,6 +71,7 @@ export const Page = styled.div`
 
         .messageArea h1{
             text-align: center;
+            color: #707070;
         }
 
         .payment__typeSelect, .payment__installmentSelect, .payment__dataCard {

@@ -63,7 +63,7 @@ export const ItemCartPayment = styled.div`
       }
   }
 
-  .item__image{
+    .item__image{
       min-width: 50px;
       min-height: 50px;
       border-radius: 50%;
@@ -71,20 +71,31 @@ export const ItemCartPayment = styled.div`
       background-repeat: no-repeat;
       background-size: 50px 50px;
       background-position: center;
-  }
+    }
 
-  .block__aux {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .block__aux {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
 
-  .item__value {
-      flex: 1;
+    .item__name {
+        flex: 1;
+    }
+
+    .item__quantity {
+        width: 50px;
+        border-radius: 4px;
+        padding: 3px;
+        outline: 0;
+    }
+
+    .item__value {
       text-align: right;
       color: var(--color-default-money);
-  }
+    }
 }
 
 @media(max-width: 650px) {

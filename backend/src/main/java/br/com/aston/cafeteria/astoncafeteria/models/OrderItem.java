@@ -28,4 +28,7 @@ public class OrderItem {
     @ManyToOne
     @JoinColumn(name="id_product", referencedColumnName="id")
     private Product product;
+
+    @Column(name = "quantity")
+    private Integer quantity;
 }
