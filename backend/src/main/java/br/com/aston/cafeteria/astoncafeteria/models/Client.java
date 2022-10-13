@@ -49,13 +49,13 @@ public class Client {
     @Column(name="password")
     private String password;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(schema = "public", name = "favorite_client",
             joinColumns = {@JoinColumn(name = "id_client")},
             inverseJoinColumns = {@JoinColumn(name = "id_product")})
     private List<Product> favorites;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(schema = "public", name = "cart_client",
             joinColumns = {@JoinColumn(name = "id_client")},
             inverseJoinColumns = {@JoinColumn(name = "id_product")})

@@ -46,7 +46,7 @@ const App = () => {
         },
         {
             id: 3,
-            name: 'Cartão débito',
+            name: 'Cartão de débito',
             codigo: 'CARTAO_DEBITO'
         }
     ];
@@ -106,7 +106,7 @@ const App = () => {
     const setValueSelectedItems = () => {
         let total = 0.0;
         selectedItems.map(item => {
-          total = total + item.price;
+          total = total + (item.price * item.quantity);
         });
         total = Number(total.toFixed(2));
         setTotalValue(utils.formatDoubleToMoney(total));
@@ -115,6 +115,7 @@ const App = () => {
     const prepareList = async () => {
         const productOrigin = await getProduct();
         if (productOrigin) {
+            productOrigin.quantity = 1;
             const isAddedToCart = state.cart.some(item => item.id === productOrigin.id);
 
             if(!isAddedToCart) {
@@ -196,6 +197,18 @@ const App = () => {
             });
         }
 
+        if (validateQuantityItems()) {
+            return dispatch({
+                type:   'ADD_MESSAGE',
+                payload: {
+                    text: 'Selecione entre 1 e 3 unidades de um mesmo produto.',
+                    icon: 'BiError',
+                    colorIcon: '#FFC700',
+                    colorText: '#707070'
+                }
+            });
+        }
+
         try {
             const paymentType = paymentOptions.find(option => option.id === Number(paymentOption));
 
@@ -244,6 +257,10 @@ const App = () => {
         setTimeout(() => {
             navigate('/');
         }, 3000);
+    };
+
+    const validateQuantityItems = () => {
+        return selectedItems.some(product => product.quantity <= 0 || product.quantity > 3);
     }
 
     return (
