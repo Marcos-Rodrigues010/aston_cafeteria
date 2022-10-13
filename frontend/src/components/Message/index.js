@@ -53,13 +53,17 @@ const App = () => {
     };
    };
 
+   const handleToCloseMessage = (e) => {
+    e.target.classList.contains('message__container') && setDisplay('none');
+   }
+
     return (
         <Message display={display}
             height={heightWindow}
             colorIcon={state.message.colorIcon}
             colorText={state.message.colorText}
             scrollPosition={scrollPosition}>
-            <div className='message__container'>
+            <div className='message__container' onClick={handleToCloseMessage}>
                 <div className='message__area'>
                     <div className='message__icon'>{getIcon()}</div>
                     <div className='message__text'>{state.message.text}</div>

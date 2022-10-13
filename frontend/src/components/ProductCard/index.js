@@ -32,6 +32,15 @@ const App = ({ product }) => {
                 }
 
             });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto adicionado aos seus favoritos.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         } else {
             dispatch({
                 type: 'ADD_MESSAGE',
@@ -57,6 +66,15 @@ const App = ({ product }) => {
                 }
 
             });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto removido dos seus favoritos.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         }
     };
 
@@ -68,6 +86,15 @@ const App = ({ product }) => {
                 type: 'UPDATE_CART',
                 payload: {
                     cart
+                }
+            });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto adicionado ao carrinho.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
                 }
             });
         } else {
@@ -94,6 +121,15 @@ const App = ({ product }) => {
                     cart
                 }
             });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto removido do carrinho.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         }
     };
 
@@ -111,7 +147,7 @@ const App = ({ product }) => {
 
     return (
         <ProductCard url={product.nameImage}>
-            <div className='product-card__image linkToProductPage' id='ok' onClick={goToProductPage}></div>
+            <div className='product-card__image linkToProductPage' onClick={goToProductPage}></div>
             <div className='product-card__infos linkToProductPage' onClick={goToProductPage}>
                 <div className='product-card__infos-title'>{product.name}</div>
                 <div className='product-card__infos-value'>{utils.formatDoubleToMoney(product.price)}</div>

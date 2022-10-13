@@ -7,6 +7,7 @@ export const Page = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    animation: fade 0.8s;
 
     .payment__listProducts-area, 
     .payment__deliveryArea, 

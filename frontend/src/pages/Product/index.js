@@ -76,6 +76,10 @@ const App = () => {
         navigate('/');
     };
 
+    const goToPayment = () => {
+        navigate(`/payment/${product.id}`);
+    }
+
     return (
         <>
             <div style={{display: "flex", justifyContent: 'center', paddingTop: '30px'}}>
@@ -108,7 +112,7 @@ const App = () => {
                         </div>
                     </div>
                     <div className='buttons'>
-                        <div className='btnComprar'>Comprar</div>
+                        <div className='btnComprar' onClick={goToPayment}>Comprar</div>
                         <div className='btnHome' onClick={goToHome}>Voltar à tela inicial</div>
                     </div>
                 </div>

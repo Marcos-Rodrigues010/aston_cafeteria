@@ -69,7 +69,7 @@ export const ItemCartPayment = styled.div`
       border-radius: 50%;
       background-image: url(${props => getImage(props.url)});
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 50px 50px;
       background-position: center;
   }
 

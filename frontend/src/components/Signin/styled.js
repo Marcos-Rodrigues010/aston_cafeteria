@@ -12,7 +12,7 @@ export const Signin = styled.div`
     height: ${props => props.height}px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 999;
+    z-index: 998;
     display: flex;
     justify-content: center;
     display: ${props => props.display};

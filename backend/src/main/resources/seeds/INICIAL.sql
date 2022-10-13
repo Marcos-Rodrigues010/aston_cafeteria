@@ -36,18 +36,18 @@ VALUES (4,
 
 INSERT INTO public.product (id, description, dimensions, name, price, weight, name_image)
 VALUES (5,
-		'Cafe Tallinh Ethiopia, 200gr. Notas e sabor: melão, ruibarbo cozido, leite de morango e braga.',
+		'Café Tallinh Ethiopia, 200gr. Notas e sabor: melão, ruibarbo cozido, leite de morango e braga.',
 		'20x7x3',
-		'cafe tallinh Ethiopia',
+		'Café tallinh Ethiopia',
 		32.90,
 		200,
 		'tallinh');
 
 INSERT INTO public.product (id, description, dimensions, name, price, weight, name_image)
 VALUES (6,
-		'kit café + caneca kalinaw. café aroma de menta, serve 10 xícaras.',
+		'Kit café + caneca kalinaw. café aroma de menta, serve 10 xícaras.',
 		'20x30x10',
-		'kit café + caneca kalinaw',
+		'Kit café + caneca kalinaw',
 		67.90,
 		400,
 		'kalinawKit');
@@ -65,7 +65,7 @@ INSERT INTO public.product (id, description, dimensions, name, price, weight, na
 VALUES (8,
 		'Café Burnt Timber, notas de fumaça negra, grão inteiro, 340gr',
 		'20x7x4',
-		'Cafe Burnt Timber',
+		'Café Burnt Timber',
 		51.90,
 		340,
 		'burntTimber');

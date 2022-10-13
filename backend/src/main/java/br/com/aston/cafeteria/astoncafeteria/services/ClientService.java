@@ -72,8 +72,10 @@ public class ClientService {
         Client client = clientRepository.findByEmailAndPassword(clientDto.getEmail(), clientDto.getPassword());
 
         ClientDto user = new ClientDto();
-        user.setId(client.getId());
-        user.setName(client.getName());
+        if (client != null && client.getId() != null) {
+            user.setId(client.getId());
+            user.setName(client.getName());
+        }
 
         return user;
     }

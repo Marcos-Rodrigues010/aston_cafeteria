@@ -71,6 +71,15 @@ const App = () => {
                     cart
                 }
             });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto adicionado ao carrinho.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
+                }
+            });
         } else {
             dispatch({
                 type: 'ADD_MESSAGE',
@@ -95,6 +104,15 @@ const App = () => {
                 type: 'UPDATE_CART',
                 payload: {
                     cart
+                }
+            });
+            dispatch({
+                type: 'ADD_MESSAGE',
+                payload: {
+                    text: 'Produto removido do carrinho.',
+                    icon: 'BsCheck2Circle',
+                    colorIcon: '#0F68BF',
+                    colorText: '#4DA2F5'
                 }
             });
         }
